@@ -1,7 +1,8 @@
 class LothyFooter extends HTMLElement {
     connectedCallback() {
         const isInsidePages = window.location.pathname.includes('/pages/');
-        const prefix = isInsidePages ? '../' : '';
+        const indexLink = isInsidePages ? '../index.html' : './index.html';
+        const pagesPrefix = isInsidePages ? '' : 'pages/';
 
         this.innerHTML = `
             <footer id="main-footer">
@@ -21,11 +22,11 @@ class LothyFooter extends HTMLElement {
             </div>
 
             <nav class="footer-links">
-                <a href="${prefix}index.html">Inicio</a>
-                <a href="${prefix}pages/nosotros.html">Nosotros</a>
-                <a href="${prefix}pages/que-es.html">¿Qué es?</a>
-                <a href="${prefix}pages/noticias.html">Noticias</a>
-                <a href="${prefix}pages/recursos.html">Comunidad</a>
+                <a href="${indexLink}">Inicio</a>
+                <a href="${pagesPrefix}nosotros.html">Nosotros</a>
+                <a href="${pagesPrefix}que-es.html">¿Qué es?</a>
+                <a href="${pagesPrefix}noticias.html">Noticias</a>
+                <a href="${pagesPrefix}recursos.html">Comunidad</a>
             </nav>
 
         </div>
