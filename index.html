@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lothy: tu amiga incondicional</title>
+    
+    <!-- Fuente única: Quicksand -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome (Iconos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Animate.css (Animaciones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- Estilos Generales -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/stats.css">
+    <link rel="stylesheet" href="css/header-footer.css">
+    <script src="js/header.js" defer></script>
+</head>
+<body>
+
+    <!-- HEADER (Hide on scroll) -->
+    <header id="main-header">
+        <lothy-header></lothy-header>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main id="main-content">
+        <!-- HERO / INICIO -->
+        <section class="hero-section">
+            <div class="hero-bg">
+                <span class="hero-blob hero-blob-1"></span>
+                <span class="hero-blob hero-blob-2"></span>
+                <span class="hero-blob hero-blob-3"></span>
+            </div>
+            <div class="container hero-container">
+                <div class="hero-grid">
+                    <div class="hero-text">
+                        <span class="hero-badge">Salud mental</span>
+                        <h1><span>Tu</span> <span class="gradient-text">Salud Mental</span> <span>Importa</span></h1>
+                        <p>Tu espacio seguro para hablar de salud mental y psicología. Aquí encontrarás apoyo, información y recursos para tu bienestar emocional.</p>
+                        <div class="hero-buttons">
+                            <a href="pages/que-es.html" class="btn btn-hero">Descubre más</a>
+                            <a href="pages/caja-anonima.html" class="btn btn-outline">Comparte tu historia</a>
+                        </div>
+                    </div>
+                    <div class="hero-image-wrapper">
+                        <div class="hero-image-card">
+                            <img src="assets/images/ImagenHero.png" alt="Imagen principal de Lothy" class="hero-image">
+                            <div class="hero-image-overlay">
+                                <div class="hero-quote">Cuidar de ti es el primer paso para sentirte mejor.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-preview">
+            <div class="container">
+                <div class="about-preview-grid">
+
+                    <div class="about-preview-image">
+                        <img src="assets/images/personaFlotante.png" alt="Lothy">
+                    </div>
+
+                    <div class="about-preview-content">
+                        <span class="section-kicker">¿Qué es Lothy?</span>
+
+                        <h2>Un espacio seguro para hablar de lo que sientes</h2>
+
+                        <p>
+                            Lothy nace con la idea de acompañar a adolescentes y jóvenes
+                            que buscan comprender mejor sus emociones, aprender sobre salud
+                            mental y encontrar recursos útiles para su bienestar.
+                        </p>
+
+                        <p>
+                            Aquí encontrarás información accesible, historias reales,
+                            recursos educativos y espacios donde expresar tus pensamientos
+                            sin sentirte juzgado.
+                        </p>
+
+                        <a href="pages/nosotros.html" class="btn btn-hero">
+                            Conoce más sobre nosotros
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- STATS SECTION (Infinite carousel) -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-showcase">
+                    <div class="stats-visual" aria-hidden="true">
+                        <img src="assets/images/salud.png" alt="">
+                    </div>
+
+                    <div class="stats-content">
+                        <span class="stats-kicker">Datos que necesitas conocer</span>
+                        <h2>La realidad de la salud mental en adolescentes</h2>
+
+                        <div class="stats-carousel-wrapper" aria-label="Datos sobre salud mental adolescente">
+                            <div class="stats-track">
+
+                                <div class="stat-item">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-brain"></i>
+                                    </div>
+                                    <span class="stat-number-large">1 de 5</span>
+                                    <span class="stat-label-large">
+                                        adolescentes experimenta un trastorno de salud mental
+                                    </span>
+                                </div>
+
+                                <div class="stat-item">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-child"></i>
+                                    </div>
+                                    <span class="stat-number-large">50%</span>
+                                    <span class="stat-label-large">
+                                        de los problemas mentales comienzan antes de los 14 años
+                                    </span>
+                                </div>
+
+                                <div class="stat-item">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-user-slash"></i>
+                                    </div>
+                                    <span class="stat-number-large">75%</span>
+                                    <span class="stat-label-large">
+                                        de los casos no reciben el apoyo o tratamiento adecuado
+                                    </span>
+                                </div>
+
+                                <div class="stat-item">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-comments"></i>
+                                    </div>
+                                    <span class="stat-number-large">35%</span>
+                                    <span class="stat-label-large">
+                                        menos riesgo de empeorar al hablar con alguien de confianza
+                                    </span>
+                                </div>
+
+                                <!-- Duplicados para efecto infinito -->
+
+                                <div class="stat-item">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-brain"></i>
+                                    </div>
+                                    <span class="stat-number-large">1 de 5</span>
+                                    <span class="stat-label-large">
+                                        adolescentes experimenta un trastorno de salud mental
+                                    </span>
+                                </div>
+
+                                <div class="stat-item">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-child"></i>
+                                    </div>
+                                    <span class="stat-number-large">50%</span>
+                                    <span class="stat-label-large">
+                                        de los problemas mentales comienzan antes de los 14 años
+                                    </span>
+                                </div>
+
+                                <div class="stat-item">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-user-slash"></i>
+                                    </div>
+                                    <span class="stat-number-large">75%</span>
+                                    <span class="stat-label-large">
+                                        de los casos no reciben el apoyo o tratamiento adecuado
+                                    </span>
+                                </div>
+
+                                <div class="stat-item">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-comments"></i>
+                                    </div>
+                                    <span class="stat-number-large">35%</span>
+                                    <span class="stat-label-large">
+                                        menos riesgo de empeorar al hablar con alguien de confianza
+                                    </span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="container">
+
+                <div class="section-header">
+                    <span class="section-kicker">¿Qué encontrarás aquí?</span>
+                    <h2>Herramientas para acompañarte</h2>
+                </div>
+
+                <div class="features-grid">
+
+                    <div class="feature-card">
+                        <i class="fas fa-book-open"></i>
+                        <h3>Información confiable</h3>
+                        <p>
+                            Aprende sobre ansiedad, autoestima, estrés y otros temas
+                            relacionados con la salud mental.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <i class="fas fa-comment-dots"></i>
+                        <h3>Espacios para expresarte</h3>
+                        <p>
+                            Comparte tus pensamientos y experiencias en un entorno seguro.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <i class="fas fa-heart"></i>
+                        <h3>Bienestar emocional</h3>
+                        <p>
+                            Descubre recursos y consejos para fortalecer tu salud mental.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Comunidad</h3>
+                        <p>
+                            Recuerda que no estás solo y que otras personas viven
+                            situaciones similares.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>        
+    </main>
+    <lothy-footer></lothy-footer>
+
+    <!-- BOTÓN FLOTANTE REUTILIZABLE -->
+    <lothy-floating-button></lothy-floating-button>
+
+    <!-- Scripts -->
+    <script src="js/footer.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/floating-button.js"></script>
+</body>
+</html>
+
