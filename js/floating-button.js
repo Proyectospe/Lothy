@@ -73,7 +73,7 @@ class LothyFloatingButton extends HTMLElement {
             });
 
             const message = `Hola Lothy! Quiero agendar una cita con el psicólogo.\n\nMi nombre: ${name}\nFecha deseada: ${formattedDate}\n\nGracias!`;
-            const phoneNumber = '51914961316';
+            const phoneNumber = '51963281281';
             const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
             window.open(whatsappUrl, '_blank');
