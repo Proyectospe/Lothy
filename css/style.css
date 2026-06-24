@@ -1006,28 +1006,3 @@ select:focus {
     }
 }
 
-.caja-single {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-
-.caja-single .form-column {
-    width: 100%;
-    max-width: 650px;
-}
-
-
-.caja-single .form-box {
-    width: 100%;
-    text-align: center;
-}
-
-
-.caja-single textarea {
-    width: 100%;
-    min-height: 180px;
-    resize: vertical;
-}
