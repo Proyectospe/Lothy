@@ -1,7 +1,7 @@
 class LothyFooter extends HTMLElement {
     connectedCallback() {
         const isInsidePages = window.location.pathname.includes('/pages/');
-        const indexLink = isInsidePages ? '../index.html' : './index.html';
+        const indexLink = isInsidePages ? '../' : './';
         const pagesPrefix = isInsidePages ? '' : 'pages/';
 
         this.innerHTML = `
