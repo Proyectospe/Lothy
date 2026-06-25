@@ -14,10 +14,9 @@ class LothyFooter extends HTMLElement {
                 <p>Tu amiga incondicional.</p>
 
                 <div class="social-links">
-                    <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.tiktok.com/@lottie.bear.com?is_from_webapp=1&sender_device=pc" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.instagram.com/lothy_bear/" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/51963281281" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
 

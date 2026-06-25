@@ -7,13 +7,14 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="../faviIcon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/header-footer.css">
-    <link rel="stylesheet" href="../css/pages-additional.css">
-    <script src="../js/header.js" defer></script>
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/sections.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    
 </head>
 <body>
 
@@ -23,69 +24,192 @@
 
     <main id="main-content">
         <section class="caja-anonima-section">
-            <div class="container">               
-
-                <section class="caja-anonima-section">
-
-                    <div class="container">
-
-                        <div class="caja-content">
-
-                            <div class="page-header">
-                                <h1>Caja Anónima</h1>
-                                <p class="subtitle">
-                                    Comparte tus pensamientos, experiencias y opiniones de manera libre.
-                                </p>
-                            </div>
-
-
-                            <div class="form-box">
-
-                                <h2>Comparte tu mensaje</h2>
-
-
-                                <form id="anonymous-form">
-
-                                    <textarea 
-                                        placeholder="Escribe aquí lo que quieras compartir. Puedes expresar tus ideas, experiencias, dudas o sentimientos."
-                                        required>
-                                    </textarea>
-
-
-                                    <button type="submit" class="btn btn-primary">
-                                        Enviar Comentario
-                                    </button>
-
-
-                                </form>
-
-
-                                <p class="form-note">
-                                    <i class="fas fa-lock"></i>
-                                    Tu mensaje será tratado de forma privada y respetuosa.
-                                </p>
-
-
-                            </div>
-
-
-                        </div>
-
+            <div class="container">
+                <div class="caja-content">
+                    <div class="page-header">
+                        <h1>Caja Anónima</h1>
+                        <p class="subtitle">
+                            Comparte tus pensamientos, juegos y retos con la comunidad de forma segura.
+                        </p>
                     </div>
 
-                </section>
-               
+                    <div class="form-box">
+                        <h2>Comparte tu mensaje</h2>
+
+                        <form id="anonymous-form">
+                            <textarea
+                                placeholder="Escribe aquí lo que quieras compartir. Puedes expresar tus ideas, experiencias, dudas o sentimientos."
+                                required></textarea>
+
+                            <button type="submit" class="btn btn-primary">
+                                Enviar Comentario
+                            </button>
+                        </form>
+
+                        <p class="form-note">
+                            <i class="fas fa-lock"></i>
+                            Tu mensaje será tratado de forma privada y respetuosa.
+                        </p>
+
+                        <div class="message-board">
+                            <h3>Mensajes recientes</h3>
+                            <div id="messages-container" class="messages-container"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="community-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Voces de la comunidad</h2>
+                    <p>Historias y sentimientos compartidos por jóvenes que buscan escucharse y apoyarse.</p>
+                </div>
+
+                <div class="testimonial-grid">
+                    <article class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="avatar">A</div>
+                            <div>
+                                <h3>Anónima</h3>
+                                <p class="role">Compartió hace 2 días</p>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">
+                            Encontré un lugar seguro donde puedo sacar lo que siento sin miedo. Es lindo saber que hay más personas escuchando.
+                        </p>
+                        <div class="testimonial-stars">❤️❤️❤️❤️</div>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="avatar">R</div>
+                            <div>
+                                <h3>Reflexión</h3>
+                                <p class="role">Compartió hace 5 días</p>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">
+                            El reto semanal me ayudó a buscar tres cosas buenas del día. Me hizo sentir más presente y tranquilo.
+                        </p>
+                        <div class="testimonial-stars">❤️❤️❤️❤️</div>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="avatar">M</div>
+                            <div>
+                                <h3>Memoria</h3>
+                                <p class="role">Compartió hace 1 semana</p>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">
+                            Me gustó el juego de emociones porque pude cambiar mis palabras por colores y entenderme mejor.
+                        </p>
+                        <div class="testimonial-stars">❤️❤️❤️❤️</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="games-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Juegos para expresar tus emociones</h2>
+                    <p>Pequeñas dinámicas para descubrir cómo te sientes y conectar con tus emociones.</p>
+                </div>
+
+                <div class="games-grid">
+                    <article class="game-card">
+                        <div class="game-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3>Colores del ánimo</h3>
+                        <p>Elige un color que represente tu estado de ánimo y cuéntanos por qué lo escogiste.</p>
+                        <button type="button" data-prompt="¿Qué color representa tu ánimo hoy y por qué?">Responder</button>
+                        <p class="game-result"></p>
+                    </article>
+
+                    <article class="game-card">
+                        <div class="game-icon">
+                            <i class="fas fa-face-smile"></i>
+                        </div>
+                        <h3>Emoji diario</h3>
+                        <p>Selecciona un emoji para tu día y escribe una frase breve sobre cómo te sientes.</p>
+                        <button type="button" data-prompt="Selecciona un emoji para tu día y escribe una frase sobre cómo te sientes.">Responder</button>
+                        <p class="game-result"></p>
+                    </article>
+
+                    <article class="game-card">
+                        <div class="game-icon">
+                            <i class="fas fa-pencil-alt"></i>
+                        </div>
+                        <h3>Dibuja tus emociones</h3>
+                        <p>Imagina una pequeña escena que refleje tu emoción más fuerte de hoy.</p>
+                        <button type="button" data-prompt="Describe en pocas palabras una escena que represente tu emoción más fuerte del día.">Responder</button>
+                        <p class="game-result"></p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="challenge-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Reto semanal</h2>
+                    <p>Un desafío amable para practicar el autocuidado con pequeñas acciones cada día.</p>
+                </div>
+
+                <div class="calendar-grid">
+                    <article class="day-card">
+                        <span>L</span>
+                        <p>Escribe 3 cosas que agradeces hoy.</p>
+                    </article>
+                    <article class="day-card">
+                        <span>M</span>
+                        <p>Haz una pausa de 5 minutos para respirar con atención.</p>
+                    </article>
+                    <article class="day-card">
+                        <span>M</span>
+                        <p>Dibuja o escribe una emoción que sentiste esta semana.</p>
+                    </article>
+                    <article class="day-card">
+                        <span>J</span>
+                        <p>Habla con alguien de confianza sobre cómo te sientes.</p>
+                    </article>
+                    <article class="day-card">
+                        <span>V</span>
+                        <p>Realiza una actividad que te haga sonreír.</p>
+                    </article>
+                </div>
+
+                <div class="challenge-action">
+                    <h3>Comparte tu experiencia</h3>
+                    <form id="challenge-form" class="challenge-form">
+                        <textarea placeholder="Cuéntanos cómo te fue con el reto semanal. Qué descubriste o cómo te sentiste." required></textarea>
+                        <button type="submit" class="btn btn-primary">Enviar experiencia</button>
+                    </form>
+
+                    <div class="challenge-feedback-board">
+                        <h3>Reflexiones del reto</h3>
+                        <div id="challenge-feedback-container" class="challenge-feedback-container"></div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
+
     <lothy-footer></lothy-footer>
 
     <!-- BOTÓN FLOTANTE REUTILIZABLE -->
     <lothy-floating-button></lothy-floating-button>
-
+    <script src="https://www.google.com/recaptcha/api.js?render=6LdhljMtAAAAAH7OEDVrJq8SB7wZsdkmW-n0F4Gw"></script>
+    <script src="../js/comentarios.js"></script>  <!-- ← solo esta línea -->
     <script src="../js/footer.js"></script>
-    <script src="../js/header.js"></script>
     <script src="../js/floating-button.js"></script>
+    <script src="../js/header.js"></script>
+    <script src="../js/main.js" type="module" defer></script>
 </body>
 </html>
 

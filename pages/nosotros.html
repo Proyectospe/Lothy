@@ -5,25 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosotros - Lothy</title>
     
-    <!-- Fuente única: Quicksand -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
+    <link rel="icon" href="../faviIcon.ico" type="image/x-icon">
     <!-- Font Awesome (Iconos) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
     <!-- Animate.css (Animaciones) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
-    <!-- Estilos Generales -->
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/header-footer.css">
-    <link rel="stylesheet" href="../css/pages-additional.css">
-    <link rel="stylesheet" href="../css/pages/nosotros.css">
-    <script src="../js/header.js" defer></script>
+    <!-- Estilos Consolidados -->
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/sections.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body>
+<body class="page">
 
     <!-- HEADER -->
     <header id="main-header">
@@ -32,68 +29,77 @@
 
     <!-- CONTENIDO PRINCIPAL -->
     <main id="main-content">
-        <!-- NOSOTROS SECTION -->
-        <section class="nosotros-section">
-            <div class="container">
-                <div class="page-header">
-                    <h1>Nosotros</h1>
-                    <p class="subtitle">Conoce quienes somos y qué nos impulsa a crear este espacio para ti</p>
-                </div>
+        <div class="hero-banner">
+            <img class="hero-banner-img" src="../assets/images/grupoMujeres.jpg" alt="Equipo Lothy">
+            <div class="hero-overlay"></div>
+            <div class="hero-content animate__animated animate__fadeInUp">
+                <div class="hero-kicker animate__animated animate__fadeInDown"><span></span> Conoce quiénes somos <span></span></div>
+                <h1>Nosotros</h1>
+                <p>Un equipo apasionado por crear un espacio seguro donde los jóvenes puedan hablar abiertamente sobre salud mental.</p>
+            </div>
+            <div class="hero-scroll-hint">
+                <div class="scroll-dot"></div>
+            </div>
+        </div>
 
-                <!-- Quienes Somos -->
-                <div class="nosotros-grid">
-                    <div class="nosotros-text">
-                        <h2>¿Quienes somos?</h2>
+        
+
+        <section class="quienes-section">
+            <div class="container">
+                <div class="quienes-grid">
+                    <div class="quienes-text">
+                        <span class="section-eyebrow">Nuestra historia</span>
+                        <h2>¿Quiénes somos?</h2>
                         <p>Somos Lothy, tu amiga incondicional. Un equipo apasionado por crear un espacio seguro donde adolescentes y jóvenes adultos puedan hablar abiertamente sobre salud mental sin miedo al juzgamiento.</p>
                         <p>Creemos que la salud mental es tan importante como la física, y que todos merecemos apoyo, comprensión y acceso a recursos de calidad.</p>
-                    </div>
-                    <div class="nosotros-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-users"></i>
-                            <span>Nuestro Equipo</span>
+                        <div class="quienes-badges">
+                            <div class="badge"><i class="fas fa-heart"></i> Con empatía</div>
+                            <div class="badge"><i class="fas fa-shield-alt"></i> Espacio seguro</div>
+                            <div class="badge"><i class="fas fa-users"></i> Para jóvenes</div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Nuestros Valores -->
-                <section class="values-section">
+        <section class="values-section">
+            <div class="container">
+                <div class="section-header">
                     <h2>Nuestros Valores</h2>
-                    <div class="values-grid">
-                        <div class="value-card">
-                            <div class="value-icon"><i class="fas fa-heart"></i></div>
-                            <h3>Apoyo Emocional</h3>
-                            <p>Brindamos un espacio donde tus sentimientos son válidos y tus experiencias son escuchadas sin juzgamiento.</p>
-                        </div>
-                        <div class="value-card">
-                            <div class="value-icon"><i class="fas fa-brain"></i></div>
-                            <h3>Educación</h3>
-                            <p>Compartimos información confiable sobre salud mental para que entiendas mejor qué te sucede.</p>
-                        </div>
-                        <div class="value-card">
-                            <div class="value-icon"><i class="fas fa-hands-helping"></i></div>
-                            <h3>Comunidad Segura</h3>
-                            <p>Formamos una comunidad donde todos nos cuidamos mutuamente y nos apoyamos en momentos difíciles.</p>
-                        </div>
-                        <div class="value-card">
-                            <div class="value-icon"><i class="fas fa-lock"></i></div>
-                            <h3>Confidencialidad</h3>
-                            <p>Tu privacidad es sagrada. Todo lo que compartas aquí está protegido y es completamente anónimo si lo deseas.</p>
-                        </div>
+                    <p>Todo lo que hacemos está guiado por principios que ponen a las personas primero.</p>
+                </div>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon"><i class="fas fa-heart"></i></div>
+                        <h3>Apoyo Emocional</h3>
+                        <p>Brindamos un espacio donde tus sentimientos son válidos y escuchados sin juzgamiento.</p>
                     </div>
-                </section>
+                    <div class="value-card">
+                        <div class="value-icon"><i class="fas fa-brain"></i></div>
+                        <h3>Educación</h3>
+                        <p>Compartimos información confiable sobre salud mental para que entiendas mejor qué te sucede.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon"><i class="fas fa-hands-helping"></i></div>
+                        <h3>Comunidad Segura</h3>
+                        <p>Formamos una comunidad donde todos nos cuidamos mutuamente en momentos difíciles.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon"><i class="fas fa-lock"></i></div>
+                        <h3>Confidencialidad</h3>
+                        <p>Tu privacidad es sagrada. Todo lo que compartas aquí está protegido y es anónimo si lo deseas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                <!-- Nuestro Objetivo -->
-                <section class="objective-section">
-                    <div class="objective-content">
-                        <div class="objective-text">
-                            <h2>Nuestro Objetivo</h2>
-                            <p>Queremos que cada persona sienta que tiene un lugar donde pertenece, donde puede ser auténtica y encontrar apoyo. Creemos que iniciar la conversación sobre salud mental es el primer paso hacia una sociedad más compasiva y consciente.</p>
-                        </div>
-                        <div class="objective-icon">
-                            <i class="fas fa-target"></i>
-                        </div>
-                    </div>
-                </section>
+        <!-- Nuestro Objetivo -->
+        <section class="objective-section">
+            <div class="objective-content">
+                <div class="objective-text">
+                    <h2>Nuestro Objetivo</h2>
+                    <p>Queremos que cada persona sienta que tiene un lugar donde pertenece, donde puede ser auténtica y encontrar apoyo. Creemos que iniciar la conversación sobre salud mental es el primer paso hacia una sociedad más compasiva y consciente.</p>
+                </div>               
             </div>
         </section>
 

@@ -1,0 +1,32 @@
+#styles.css
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* brand a la izquierda, links a la derecha */
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-brand {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;   /* en escritorio, en fila */
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* opcional: en móvil que sí se acomoden debajo */
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+    }
+    .footer-links {
+        flex-direction: column;
+        margin-top: 15px;
+    }
+}

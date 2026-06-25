@@ -5,23 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lothy: tu amiga incondicional</title>
     
-    <!-- Fuente única: Quicksand -->
+    <!-- Font Awesome (Iconos) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome (Iconos) -->
+    <link rel="icon" href="./faviIcon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
     <!-- Animate.css (Animaciones) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
-    <!-- Estilos Generales -->
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/hero.css">
-    <link rel="stylesheet" href="./css/stats.css">
-    <link rel="stylesheet" href="./css/header-footer.css">
-    <script src="./js/header.js" defer></script>
+    <!-- Estilos Consolidados -->
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/sections.css">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
 
@@ -66,8 +63,8 @@
             <div class="container">
                 <div class="about-preview-grid">
 
-                    <div class="about-preview-image">
-                        <img src="./assets/images/personaFlotante.png" alt="Lothy">
+                    <div class="stats-visual" aria-hidden="true">
+                        <img src="./assets/images/salud.png" alt="">
                     </div>
 
                     <div class="about-preview-content">
@@ -101,9 +98,7 @@
         <section class="stats-section">
             <div class="container">
                 <div class="stats-showcase">
-                    <div class="stats-visual" aria-hidden="true">
-                        <img src="./assets/images/salud.png" alt="">
-                    </div>
+                    
 
                     <div class="stats-content">
                         <span class="stats-kicker">Datos que necesitas conocer</span>
@@ -257,8 +252,8 @@
 
     <!-- Scripts -->
     <script src="./js/footer.js"></script>
-    <script src="./js/header.js"></script>
     <script src="./js/floating-button.js"></script>
+    <script src="./js/header.js" defer></script>
 </body>
 </html>
 

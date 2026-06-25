@@ -1,6 +1,4 @@
-import { initHeader } from './header.js';
 import { initLanguage } from './language.js';
-import { initFloatingButton } from './floating-button.js';
 
 // Inicializar AOS
 document.addEventListener('DOMContentLoaded', () => {
@@ -14,11 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     // Inicializar funcionalidades
-    initHeader();
     initLanguage();
-    initFloatingButton();
     initNavigation();
     initAnonymousBox();
+    initEmotionGames();
+    initWeeklyChallenge();
     initStatsObserver();
 });
 
@@ -48,9 +46,10 @@ function initNavigation() {
 
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
-            e.preventDefault();
-
             const targetId = link.getAttribute('data-section');
+            if (!targetId) return;
+
+            e.preventDefault();
             const targetSection = document.getElementById(targetId);
 
             if (targetSection) {
@@ -67,10 +66,17 @@ function initNavigation() {
 function initAnonymousBox() {
     const form = document.getElementById('anonymous-form');
     const messagesContainer = document.getElementById('messages-container');
+    if (!form || !messagesContainer) return;
 
     function loadMessages() {
         const messages = JSON.parse(localStorage.getItem('anonymousMessages')) || [];
         messagesContainer.innerHTML = '';
+
+        if (messages.length === 0) {
+            messagesContainer.innerHTML = '<p class="empty-state">Comparte el primer mensaje y verás aparecer las voces de la comunidad aquí.</p>';
+            return;
+        }
+
         messages.slice(-5).reverse().forEach((msg, index) => {
             const messageCard = document.createElement('div');
             messageCard.className = 'message-card';
@@ -111,6 +117,76 @@ function initAnonymousBox() {
     });
 
     loadMessages();
+}
+
+function initEmotionGames() {
+    const buttons = document.querySelectorAll('.game-card button');
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            const promptText = button.dataset.prompt;
+            const response = window.prompt(promptText, '');
+            if (!response) return;
+
+            const resultNode = button.closest('.game-card').querySelector('.game-result');
+            resultNode.textContent = `Gracias por compartir: "${response}"`;
+            resultNode.classList.add('active');
+        });
+    });
+}
+
+function initWeeklyChallenge() {
+    const challengeForm = document.getElementById('challenge-form');
+    const feedbackContainer = document.getElementById('challenge-feedback-container');
+    if (!challengeForm || !feedbackContainer) return;
+
+    function loadFeedback() {
+        const feedback = JSON.parse(localStorage.getItem('challengeFeedback')) || [];
+        feedbackContainer.innerHTML = '';
+
+        if (feedback.length === 0) {
+            feedbackContainer.innerHTML = '<p class="empty-state">Aún no hay experiencias del reto. Sé el primero en compartir.</p>';
+            return;
+        }
+
+        feedback.slice(-5).reverse().forEach((item) => {
+            const card = document.createElement('div');
+            card.className = 'challenge-feedback-card';
+            card.innerHTML = `
+                <p>"${item.text}"</p>
+                <span class="message-date">${item.date}</span>
+            `;
+            feedbackContainer.appendChild(card);
+        });
+    }
+
+    function saveFeedback(text) {
+        const feedback = JSON.parse(localStorage.getItem('challengeFeedback')) || [];
+        const newFeedback = {
+            text,
+            date: new Date().toLocaleDateString('es-ES', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            })
+        };
+        feedback.push(newFeedback);
+        localStorage.setItem('challengeFeedback', JSON.stringify(feedback));
+        loadFeedback();
+    }
+
+    challengeForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const textarea = challengeForm.querySelector('textarea');
+        const text = textarea.value.trim();
+
+        if (text) {
+            saveFeedback(text);
+            textarea.value = '';
+            alert('✨ ¡Gracias por compartir tu experiencia del reto!');
+        }
+    });
+
+    loadFeedback();
 }
 
 // Observer para animar stats al entrar
