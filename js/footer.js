@@ -15,8 +15,7 @@ class LothyFooter extends HTMLElement {
 
                 <div class="social-links">
                     <a href="https://www.tiktok.com/@lottie.bear.com?is_from_webapp=1&sender_device=pc" title="TikTok"><i class="fab fa-tiktok"></i></a>
-                    <a href="https://www.instagram.com/lothy_bear/" title="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me/51963281281" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/lothy_bear/" title="Instagram"><i class="fab fa-instagram"></i></a>                    
                 </div>
             </div>
 
@@ -25,7 +24,8 @@ class LothyFooter extends HTMLElement {
                 <a href="${pagesPrefix}nosotros.html">Nosotros</a>
                 <a href="${pagesPrefix}que-es.html">¿Qué es?</a>
                 <a href="${pagesPrefix}noticias.html">Noticias</a>
-                <a href="${pagesPrefix}recursos.html">Comunidad</a>
+                <a href="${pagesPrefix}comunidad.html">Comunidad</a>
+                <a href="${pagesPrefix}test.html">Test</a>
             </nav>
 
         </div>

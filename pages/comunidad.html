@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/sections.css">
     <link rel="stylesheet" href="../css/styles.css">
-    
+    <link rel="stylesheet" href="../css/caja-anonima.css">
 </head>
 <body>
 
@@ -23,47 +23,94 @@
     </header>
 
     <main id="main-content">
+        <!-- ============================================
+        SECCIÓN PRINCIPAL - CAJA ANÓNIMA
+        ============================================ -->
         <section class="caja-anonima-section">
             <div class="container">
                 <div class="caja-content">
                     <div class="page-header">
-                        <h1>Caja Anónima</h1>
+                        <h1>📝 Comunidad Lothy</h1>
                         <p class="subtitle">
-                            Comparte tus pensamientos, juegos y retos con la comunidad de forma segura.
+                            Comparte tus pensamientos, experiencias y conecta con otros de forma anónima y segura.
                         </p>
                     </div>
 
+                    <!-- ===== FORMULARIO DE NUEVA PUBLICACIÓN ===== -->
                     <div class="form-box">
-                        <h2>Comparte tu mensaje</h2>
+                        <h2>Comparte algo</h2>
+                        <form id="nueva-publicacion-form" onsubmit="return false;">
+                            <textarea 
+                                placeholder="¿Qué quieres compartir hoy? Tus pensamientos, experiencias, dudas o sentimientos..."
+                                rows="3"
+                                required
+                            ></textarea>
+                            
+                            <div class="categorias-grid">
+                                <label style="font-weight: 600; font-size: 0.85rem; color: var(--text-dark); width: 100%; margin-bottom: 0.3rem;">
+                                    <i class="fas fa-tags" style="color: var(--primary-pink);"></i> Categoría
+                                </label>
+                                <button type="button" class="categoria-chip activa" data-categoria="Sin categoría">
+                                    <span class="emoji">📋</span> Sin categoría
+                                </button>
+                                <button type="button" class="categoria-chip" data-categoria="Ansiedad">
+                                    <span class="emoji">😰</span> Ansiedad
+                                </button>
+                                <button type="button" class="categoria-chip" data-categoria="Estrés">
+                                    <span class="emoji">😩</span> Estrés
+                                </button>
+                                <button type="button" class="categoria-chip" data-categoria="Amigos">
+                                    <span class="emoji">👥</span> Amigos
+                                </button>
+                                <button type="button" class="categoria-chip" data-categoria="Estudios">
+                                    <span class="emoji">📚</span> Estudios
+                                </button>
+                                <button type="button" class="categoria-chip" data-categoria="Familia">
+                                    <span class="emoji">👨‍👩‍👧‍👦</span> Familia
+                                </button>
+                            </div>
 
-                        <form id="anonymous-form">
-                            <textarea
-                                placeholder="Escribe aquí lo que quieras compartir. Puedes expresar tus ideas, experiencias, dudas o sentimientos."
-                                required></textarea>
-
-                            <button type="submit" class="btn btn-primary">
-                                Enviar Comentario
+                            <button type="button" class="btn btn-primary" id="btn-publicar">
+                                <i class="fas fa-paper-plane"></i> Publicar
                             </button>
                         </form>
 
                         <p class="form-note">
                             <i class="fas fa-lock"></i>
-                            Tu mensaje será tratado de forma privada y respetuosa.
+                            Tu mensaje será anónimo y respetamos tu privacidad.
                         </p>
+                    </div>
 
-                        <div class="message-board">
-                            <h3>Mensajes recientes</h3>
-                            <div id="messages-container" class="messages-container"></div>
+                    <!-- ===== FILTROS Y PUBLICACIONES ===== -->
+                    <div style="margin-top: 2rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 1rem;">
+                            <h3 style="font-size: 1.3rem; font-weight: 800; color: var(--primary-dark); font-family: var(--font-display);">
+                                📚 Publicaciones recientes
+                            </h3>
+                            <span id="contador-publicaciones" style="font-size: 0.85rem; color: var(--text-muted);">
+                                0 publicaciones
+                            </span>
+                        </div>
+
+                        <div class="filtros-container" id="filtros-container">
+                            <!-- Los filtros se generan con JavaScript -->
+                        </div>
+
+                        <div id="publicaciones-container">
+                            <!-- Las publicaciones se renderizan con JavaScript -->
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ============================================
+        SECCIÓN - VOCES DE LA COMUNIDAD
+        ============================================ -->
         <section class="community-section">
             <div class="container">
                 <div class="section-title">
-                    <h2>Voces de la comunidad</h2>
+                    <h2>💬 Voces de la comunidad</h2>
                     <p>Historias y sentimientos compartidos por jóvenes que buscan escucharse y apoyarse.</p>
                 </div>
 
@@ -72,51 +119,53 @@
                         <div class="testimonial-header">
                             <div class="avatar">A</div>
                             <div>
-                                <h3>Anónima</h3>
+                                <h3>Anónimo</h3>
                                 <p class="role">Compartió hace 2 días</p>
                             </div>
                         </div>
                         <p class="testimonial-text">
                             Encontré un lugar seguro donde puedo sacar lo que siento sin miedo. Es lindo saber que hay más personas escuchando.
-                        </p>
-                        <div class="testimonial-stars">❤️❤️❤️❤️</div>
+                        </p>                       
                     </article>
 
                     <article class="testimonial-card">
                         <div class="testimonial-header">
                             <div class="avatar">R</div>
                             <div>
-                                <h3>Reflexión</h3>
+                                <h3>Anónimo</h3>
                                 <p class="role">Compartió hace 5 días</p>
                             </div>
                         </div>
                         <p class="testimonial-text">
                             El reto semanal me ayudó a buscar tres cosas buenas del día. Me hizo sentir más presente y tranquilo.
                         </p>
-                        <div class="testimonial-stars">❤️❤️❤️❤️</div>
+                        
                     </article>
 
                     <article class="testimonial-card">
                         <div class="testimonial-header">
                             <div class="avatar">M</div>
                             <div>
-                                <h3>Memoria</h3>
+                                <h3>Anónimo</h3>
                                 <p class="role">Compartió hace 1 semana</p>
                             </div>
                         </div>
                         <p class="testimonial-text">
                             Me gustó el juego de emociones porque pude cambiar mis palabras por colores y entenderme mejor.
                         </p>
-                        <div class="testimonial-stars">❤️❤️❤️❤️</div>
+                        
                     </article>
                 </div>
             </div>
         </section>
 
+        <!-- ============================================
+        SECCIÓN - JUEGOS EMOCIONALES
+        ============================================ -->
         <section class="games-section">
             <div class="container">
                 <div class="section-title">
-                    <h2>Juegos para expresar tus emociones</h2>
+                    <h2>🎮 Juegos para expresar tus emociones</h2>
                     <p>Pequeñas dinámicas para descubrir cómo te sientes y conectar con tus emociones.</p>
                 </div>
 
@@ -154,10 +203,13 @@
             </div>
         </section>
 
+        <!-- ============================================
+        SECCIÓN - RETO SEMANAL
+        ============================================ -->
         <section class="challenge-section">
             <div class="container">
                 <div class="section-title">
-                    <h2>Reto semanal</h2>
+                    <h2>🌱 Reto semanal</h2>
                     <p>Un desafío amable para practicar el autocuidado con pequeñas acciones cada día.</p>
                 </div>
 
@@ -186,9 +238,11 @@
 
                 <div class="challenge-action">
                     <h3>Comparte tu experiencia</h3>
-                    <form id="challenge-form" class="challenge-form">
+                    <form id="challenge-form" class="challenge-form" onsubmit="return false;">
                         <textarea placeholder="Cuéntanos cómo te fue con el reto semanal. Qué descubriste o cómo te sentiste." required></textarea>
-                        <button type="submit" class="btn btn-primary">Enviar experiencia</button>
+                        <button type="button" class="btn btn-primary" id="btn-enviar-reto">
+                            <i class="fas fa-paper-plane"></i> Enviar experiencia
+                        </button>
                     </form>
 
                     <div class="challenge-feedback-board">
@@ -202,15 +256,24 @@
 
     <lothy-footer></lothy-footer>
 
-    <!-- BOTÓN FLOTANTE REUTILIZABLE -->
+    <!-- ============================================
+    BOTÓN FLOTANTE
+    ============================================ -->
     <lothy-floating-button></lothy-floating-button>
+
+    <!-- ============================================
+    CONTENEDOR DE NOTIFICACIONES (ANTES DE SCRIPTS)
+    ============================================ -->
+    <div id="notification-container" class="notification-container"></div>
+
+    <!-- ============================================
+    SCRIPTS
+    ============================================ -->
     <script src="https://www.google.com/recaptcha/api.js?render=6LdhljMtAAAAAH7OEDVrJq8SB7wZsdkmW-n0F4Gw"></script>
-    <script src="../js/comentarios.js"></script>  <!-- ← solo esta línea -->
+    <script src="../js/comentarios.js"></script>
     <script src="../js/footer.js"></script>
     <script src="../js/floating-button.js"></script>
     <script src="../js/header.js"></script>
     <script src="../js/main.js" type="module" defer></script>
 </body>
 </html>
-
-

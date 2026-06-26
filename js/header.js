@@ -20,9 +20,8 @@ class LothyHeader extends HTMLElement {
                         <li><a href="${pagesPrefix}nosotros.html">Nosotros</a></li>
                         <li><a href="${pagesPrefix}que-es.html">¿Qué es?</a></li>
                         <li><a href="${pagesPrefix}noticias.html">Noticias</a></li>
-                        <li><a href="${pagesPrefix}caja-anonima.html">Caja Anónima</a></li>
-                        <li><a href="${pagesPrefix}recursos.html">Comunidad</a></li>
-
+                        <li><a href="${pagesPrefix}comunidad.html">Comunidad</a></li>                       
+                        <li><a href="${pagesPrefix}test.html">Test</a></li>           
                     </ul>
                 </nav>
                 <div class="header-actions">

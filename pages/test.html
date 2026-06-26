@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Emocional - Lothy</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="../faviIcon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/sections.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/test-emocional.css">
+</head>
+<body>
+
+    <header id="main-header">
+        <lothy-header></lothy-header>
+    </header>
+
+    <main id="main-content">
+        <!-- ============================================
+        SECCIÓN HERO
+        ============================================ -->
+        <section class="test-hero">
+            <div class="container">
+                <div class="test-hero-content">
+                    <span class="section-tag">🧠 Autoconocimiento</span>
+                    <h1>Test Emocional</h1>
+                    <p class="subtitle">
+                        Responde estas preguntas para conocer mejor tu estado emocional actual.
+                    </p>
+                    <p class="test-disclaimer">
+                        <i class="fas fa-info-circle"></i>
+                        Este test es orientativo y no reemplaza una consulta profesional.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+        SECCIÓN - TESTS DISPONIBLES
+        ============================================ -->
+        <section class="tests-lista-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>📋 Elige tu Test</h2>
+                    <p>Selecciona el área que quieres evaluar para comenzar.</p>
+                </div>
+
+                <div class="tests-grid" id="tests-grid">
+                    <!-- Test 1: Ansiedad -->
+                    <div class="test-card" onclick="iniciarTest('ansiedad')">
+                        <div class="test-icon">😰</div>
+                        <span class="test-badge">Ansiedad</span>
+                        <h3>Test de Ansiedad</h3>
+                        <p>Evalúa tu nivel de ansiedad en las últimas dos semanas.</p>
+                        <div class="test-meta">
+                            <span><i class="fas fa-clock"></i> 3 min</span>
+                            <span><i class="fas fa-question-circle"></i> 10 preguntas</span>
+                        </div>
+                    </div>
+
+                    <!-- Test 2: Estrés -->
+                    <div class="test-card" onclick="iniciarTest('estres')">
+                        <div class="test-icon">😩</div>
+                        <span class="test-badge">Estrés</span>
+                        <h3>Test de Estrés</h3>
+                        <p>Descubre tu nivel de estrés actual y cómo afecta tu día a día.</p>
+                        <div class="test-meta">
+                            <span><i class="fas fa-clock"></i> 3 min</span>
+                            <span><i class="fas fa-question-circle"></i> 10 preguntas</span>
+                        </div>
+                    </div>
+
+                    <!-- Test 3: Autoestima -->
+                    <div class="test-card" onclick="iniciarTest('autoestima')">
+                        <div class="test-icon">💪</div>
+                        <span class="test-badge">Autoestima</span>
+                        <h3>Test de Autoestima</h3>
+                        <p>Conoce cómo te percibes a ti mismo y tu nivel de autoconfianza.</p>
+                        <div class="test-meta">
+                            <span><i class="fas fa-clock"></i> 4 min</span>
+                            <span><i class="fas fa-question-circle"></i> 10 preguntas</span>
+                        </div>
+                    </div>
+
+                    <!-- Test 4: Depresión -->
+                    <div class="test-card" onclick="iniciarTest('depresion')">
+                        <div class="test-icon">😔</div>
+                        <span class="test-badge">Depresión</span>
+                        <h3>Test de Depresión</h3>
+                        <p>Evalúa tu estado de ánimo y posibles síntomas depresivos.</p>
+                        <div class="test-meta">
+                            <span><i class="fas fa-clock"></i> 3 min</span>
+                            <span><i class="fas fa-question-circle"></i> 10 preguntas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+        MODAL - REALIZAR TEST
+        ============================================ -->
+        <div id="test-modal" class="test-modal" style="display: none;">
+            <div class="modal-overlay" onclick="cerrarTest()"></div>
+            <div class="modal-content">
+                <button class="close-modal" onclick="cerrarTest()">
+                    <i class="fas fa-times"></i>
+                </button>
+                
+                <div id="test-progress" class="test-progress">
+                    <span id="pregunta-actual">1</span> / <span id="total-preguntas">10</span>
+                    <div class="progress-bar">
+                        <div id="progress-fill" class="progress-fill" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div id="test-container">
+                    <!-- Las preguntas se cargan con JavaScript -->
+                </div>
+
+                <div class="test-actions">
+                    <button id="btn-anterior" class="btn-secondary" onclick="preguntaAnterior()" style="display: none;">
+                        <i class="fas fa-arrow-left"></i> Anterior
+                    </button>
+                    <button id="btn-siguiente" class="btn-primary" onclick="preguntaSiguiente()">
+                        Siguiente <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button id="btn-enviar" class="btn-primary" onclick="enviarTest()" style="display: none;">
+                        <i class="fas fa-paper-plane"></i> Ver resultados
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================
+        MODAL - RESULTADOS
+        ============================================ -->
+        <div id="resultados-modal" class="test-modal" style="display: none;">
+            <div class="modal-overlay" onclick="cerrarResultados()"></div>
+            <div class="modal-content resultados-content">
+                <button class="close-modal" onclick="cerrarResultados()">
+                    <i class="fas fa-times"></i>
+                </button>
+                
+                <div id="resultados-container" class="resultados-container">
+                    <div class="resultados-header">
+                        <i class="fas fa-chart-pie" style="font-size: 3rem; color: var(--primary-pink);"></i>
+                        <h2>Tus Resultados</h2>
+                        <p id="resultado-test-nombre" style="color: var(--text-light);"></p>
+                    </div>
+                    
+                    <div id="resultado-puntaje" class="resultado-puntaje">
+                        <!-- Se llena con JavaScript -->
+                    </div>
+                    
+                    <div id="resultado-nivel" class="resultado-nivel">
+                        <!-- Se llena con JavaScript -->
+                    </div>
+                    
+                    <div id="resultado-recomendacion" class="resultado-recomendacion">
+                        <!-- Se llena con JavaScript -->
+                    </div>
+
+                    <div id="resultado-detalles" class="resultado-detalles">
+                        <!-- Se llena con JavaScript -->
+                    </div>
+
+                    <div class="resultados-actions">
+                        <button class="btn-secondary" onclick="cerrarResultados()">
+                            <i class="fas fa-undo"></i> Volver
+                        </button>
+                        <button class="btn-primary" onclick="compartirResultado()">
+                            <i class="fas fa-share-alt"></i> Compartir en comunidad
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================
+        SECCIÓN - RECURSOS
+        ============================================ -->
+        <section class="recursos-test-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>💡 Recursos para tu Bienestar</h2>
+                    <p>Consejos prácticos para cuidar tu salud mental.</p>
+                </div>
+
+                <div class="recursos-test-grid">
+                    <div class="recurso-card">
+                        <div class="recurso-icon">🧘</div>
+                        <h3>Respiración Consciente</h3>
+                        <p>Practica la respiración diafragmática para reducir la ansiedad en minutos.</p>
+                    </div>
+                    <div class="recurso-card">
+                        <div class="recurso-icon">📝</div>
+                        <h3>Diario Emocional</h3>
+                        <p>Escribe tus emociones diarias para procesarlas y entenderlas mejor.</p>
+                    </div>
+                    <div class="recurso-card">
+                        <div class="recurso-icon">🎵</div>
+                        <h3>Música Relajante</h3>
+                        <p>Escucha música suave para calmar la mente y reducir el estrés.</p>
+                    </div>
+                    <div class="recurso-card">
+                        <div class="recurso-icon">🌿</div>
+                        <h3>Conecta con la Naturaleza</h3>
+                        <p>Salir al aire libre mejora el estado de ánimo y reduce la ansiedad.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <lothy-footer></lothy-footer>
+    <lothy-floating-button></lothy-floating-button>
+
+    <!-- ============================================
+    SCRIPTS
+    ============================================ -->
+    <script src="../js/test-emocional.js"></script>
+    <script src="../js/footer.js"></script>
+    <script src="../js/floating-button.js"></script>
+    <script src="../js/header.js"></script>
+    <script src="../js/main.js" type="module" defer></script>
+</body>
+</html>
