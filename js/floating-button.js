@@ -83,7 +83,7 @@ class LothyFloatingButton extends HTMLElement {
                 `*Mi Nombre es:* ${name}\n\n` +
                 `¡Quedo atento a la confirmación, gracias!`;
 
-            const phoneNumber = '51963281281';
+            const phoneNumber = '5199999999'; // Reemplaza con el número de teléfono de WhatsApp del psicólogo
             const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
             window.open(whatsappUrl, '_blank');
