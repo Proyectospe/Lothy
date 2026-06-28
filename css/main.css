@@ -565,7 +565,6 @@
 }
 
 .recursos-grid,
-.testimonios-grid,
 .noticias-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -608,7 +607,6 @@
     .contacto-grid,
     .caja-content,
     .recursos-grid,
-    .testimonios-grid,
     .noticias-grid {
         grid-template-columns: 1fr;
         gap: 40px;
