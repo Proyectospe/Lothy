@@ -13,9 +13,8 @@ class LothyFooter extends HTMLElement {
                 <h3>Lothy</h3>
                 <p>Tu amiga incondicional.</p>
 
-                <div class="social-links">
-                    <a href="https://www.tiktok.com/@lottie.bear.com?is_from_webapp=1&sender_device=pc" title="TikTok"><i class="fab fa-tiktok"></i></a>
-                    <a href="https://www.instagram.com/lothy_bear/" title="Instagram"><i class="fab fa-instagram"></i></a>                    
+                <div class="social-links">                    
+                    <a href="https://www.instagram.com/lothybear/" title="Instagram"><i class="fab fa-instagram"></i></a>                    
                 </div>
             </div>
 
